@@ -41,6 +41,18 @@ us to have a decentralized registry, and allow snap developers to register their
 snaps themselves. This is currently a work in progress. Progress can be tracked
 in the [Permissionless Snaps Registry] repository.
 
+## Checking if snaps are allowed to be installed
+
+The process of checking if snaps are allowed to be installed involves the following steps:
+
+1. **Fetch the registry**: The Snap Controller fetches the registry file from the MetaMask infrastructure.
+2. **Verify the signature**: The Snap Controller verifies the signature of the registry file using the known public key.
+3. **Check the allowlist**: The Snap Controller checks if the snap is in the allowlist. If the snap is in the allowlist, it is allowed to be installed.
+4. **Check the blocklist**: If the snap is not in the allowlist, the Snap Controller checks if the snap is in the blocklist. If the snap is in the blocklist, it is not allowed to be installed.
+5. **Default behavior**: If the snap is not in either the allowlist or the blocklist, the Snap Controller will follow the default behavior based on the `requireAllowlist` feature flag. If the feature flag is enabled, the snap will not be allowed to be installed. If the feature flag is disabled, the snap will be allowed to be installed.
+
+This process ensures that only snaps that are explicitly allowed by the registry can be installed, providing an additional layer of security and control over the snaps that are used in the MetaMask extension.
+
 [snap controller]: ./snap-controller.md
 [jsonsnapsregistry]: ../../../packages/snaps-controllers/src/snaps/registry/json.ts
 [snaps registry]: https://github.com/MetaMask/snaps-registry

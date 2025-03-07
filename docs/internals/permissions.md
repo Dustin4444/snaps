@@ -28,6 +28,9 @@ and they are part of the state of the permission system.
 Permissions can have **caveats**, which are host-defined attenuations of the
 authority a permission grants over a particular target.
 
+Recent changes and improvements to the permission system include better error handling, 
+support for new types of permissions, and improved performance.
+
 ## Implementation
 
 At any given moment, the [PermissionController] state tree describes the
