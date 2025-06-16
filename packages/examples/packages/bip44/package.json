@@ -44,7 +44,7 @@
   },
   "dependencies": {
     "@metamask/key-tree": "^10.0.2",
-    "@metamask/snaps-sdk": "workspace:^",
+    "@metamask/snaps-sdk": "0.0.0",
     "@metamask/utils": "^11.2.0",
     "@noble/bls12-381": "^1.2.0"
   },
