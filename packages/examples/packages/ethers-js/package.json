@@ -43,7 +43,7 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
-    "@metamask/snaps-sdk": "workspace:^",
+    "@metamask/snaps-sdk": "0.0.0",
     "ethers": "^6.3.0"
   },
   "devDependencies": {
