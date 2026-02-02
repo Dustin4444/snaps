@@ -41,11 +41,11 @@
     "test:watch": "jest --watch"
   },
   "devDependencies": {
-    "@lavamoat/allow-scripts": "^3.0.4",
+    "@lavamoat/allow-scripts": "^3.4.1",
     "@metamask/auto-changelog": "^4.1.0",
     "@types/node": "18.14.2",
     "depcheck": "^1.4.7",
-    "eslint": "^9.11.0",
+    "eslint": "^9.26.0",
     "jest-silent-reporter": "^0.6.0",
     "prettier": "^3.3.3",
     "ts-node": "^10.9.1",
