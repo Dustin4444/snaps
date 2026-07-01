@@ -61,6 +61,34 @@ is done through the controller messaging system in the MetaMask extension. The
 execution service is hooked up to the controller messaging system, so it can
 handle requests from other parts of the extension.
 
+## Communication between Snap Controller and Execution Service
+
+The Snap Controller and the Execution Service communicate through a well-defined
+messaging system. This system ensures that the Snap Controller can manage the
+execution of snaps in a secure and efficient manner. The communication process
+involves the following steps:
+
+1. **Request Handling**: The Snap Controller receives a request from a dapp or
+   another part of the MetaMask extension.
+2. **Execution Request**: The Snap Controller sends an execution request to the
+   Execution Service, specifying the snap to be executed and any necessary
+   parameters.
+3. **Environment Setup**: The Execution Service sets up the appropriate
+   Execution Environment for the snap, ensuring that it is isolated and secure.
+4. **Stream Setup**: The Execution Service establishes a communication stream
+   between the Snap Controller and the Execution Environment.
+5. **Snap Execution**: The Execution Service instructs the Execution Environment
+   to execute the snap code.
+6. **Response Handling**: The Execution Environment processes the request and
+   sends the response back to the Execution Service, which then forwards it to
+   the Snap Controller.
+7. **Completion**: The Snap Controller receives the response and completes the
+   request, sending the result back to the original requester.
+
+This communication process ensures that snaps are executed securely and
+efficiently, with clear separation of responsibilities between the Snap
+Controller and the Execution Service.
+
 [snap controller]: ./snap-controller.md
 [execution environment]: ./execution-environment.md
 [post message stream]: https://github.com/MetaMask/post-message-stream
