@@ -81,8 +81,8 @@
     "@metamask/post-message-stream": "^10.0.0",
     "@metamask/providers": "^22.1.1",
     "@metamask/rpc-errors": "^7.0.3",
-    "@metamask/snaps-sdk": "workspace:^",
-    "@metamask/snaps-utils": "workspace:^",
+    "@metamask/snaps-sdk": "0.0.0",
+    "@metamask/snaps-utils": "0.24.0",
     "@metamask/superstruct": "^3.2.1",
     "@metamask/utils": "^11.11.0",
     "readable-stream": "^3.6.2"
