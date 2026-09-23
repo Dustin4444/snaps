@@ -57,7 +57,7 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
-    "@metamask/snaps-utils": "workspace:^"
+    "@metamask/snaps-utils": "0.24.0"
   },
   "devDependencies": {
     "@lavamoat/allow-scripts": "^4.0.0",
