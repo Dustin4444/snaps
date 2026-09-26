@@ -60,7 +60,7 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
-    "@metamask/snaps-utils": "workspace:^",
+    "@metamask/snaps-utils": "0.24.0",
     "semver": "^7.5.4",
     "yargs": "^17.7.1"
   },
