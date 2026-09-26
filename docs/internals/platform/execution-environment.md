@@ -1,5 +1,7 @@
 # Execution Environment
 
+This document provides an overview of the execution environments in the MetaMask Snaps platform. It explains the key components and their roles in executing snap code.
+
 The MetaMask Snaps platform has several execution **environments**, not to be
 confused with execution **services**. The execution environment is responsible
 for executing the snap code, and for communicating with the [Execution Service].
@@ -18,6 +20,9 @@ Currently, the following execution environments are supported:
 - Offscreen (Manifest V3), which uses the [Offscreen Document API] to create a
   proxy to the iframe execution environment.
 - WebWorker (Manifest V2), which creates a web worker for each snap execution.
+- Ethereum Provider, which allows snaps to interact with the Ethereum blockchain.
+- Cronjob, which allows snaps to schedule background tasks.
+- Transaction Insights, which provides transaction insights to snaps.
 
 ## Proxy execution environments
 
