@@ -39,6 +39,36 @@ and `Response`. These endowments may also be further hardened before being
 passed to the snap, see for example [network hardening], which hardens the
 `fetch` global before granting it to the snap.
 
+Recent updates have added new endowments, such as `endowment:ethereum-provider`, 
+`endowment:cronjob`, and `endowment:transaction-insights`. These endowments 
+provide additional capabilities to snaps, allowing them to interact with the 
+Ethereum blockchain, schedule background tasks, and provide transaction insights, 
+respectively.
+
+## Creating and Managing SES Compartments
+
+Creating and managing SES compartments is a crucial part of ensuring the security 
+and isolation of snaps. The process involves the following steps:
+
+1. **Create a new SES Compartment**: A new SES compartment is created for each snap. 
+   This compartment provides a sandboxed environment where the snap code can be executed 
+   without affecting the rest of the system.
+
+2. **Define Endowments**: The endowments for the snap are defined and provided to the 
+   SES compartment. These endowments include the global APIs that the snap is allowed 
+   to access.
+
+3. **Evaluate Snap Code**: The snap code is evaluated within the SES compartment. This 
+   ensures that the snap code is executed in a controlled environment with limited access 
+   to global APIs.
+
+4. **Manage Compartment Lifecycle**: The lifecycle of the SES compartment is managed to 
+   ensure that it is properly initialized, executed, and terminated. This includes 
+   handling any errors that may occur during the execution of the snap code.
+
+By following these steps, we can ensure that snaps are executed in a secure and isolated 
+environment, preventing them from accessing or modifying sensitive parts of the system.
+
 <!--
 
 ## Hardening of the `snap` and `ethereum` globals
